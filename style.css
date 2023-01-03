@@ -1,0 +1,71 @@
+html{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+}
+h1 {
+    background-color: black;
+    color: white;
+}
+.container .first{
+    text-align: right;
+}
+
+.container .second{
+    text-align: center;
+}
+.container .first button {
+    color: white;
+    background-color: blue;
+    border: 1px solid white;
+}
+table, td {
+    border:1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+  }
+
+input {
+    border: 1px solid white;
+    width: 97%;
+    outline: none;
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+}  
+form{
+    display: flex;
+    justify-content: center;
+   
+}
+img{
+    width: 200px;
+    height: 200px;
+} 
+.itemcard {
+    padding: 10px;
+    text-align: center;
+}  
+.column {
+    border: 1.5px solid black;
+   
+}  
+.card {
+    display: grid;
+    justify-content: space-between;
+    grid-template-columns: auto auto auto;
+    width: 80%;
+    margin: 0 10%;
+}
+.menu {
+    display: none;
+    width: 100%;
+    position: absolute;
+    background-color: white;
+    padding: 10px 15px;
+    height: 100%;
+  }
+
+  select#unit {
+    width: 100%;
+    outline: none;
+    border: 1px solid white;
+}
