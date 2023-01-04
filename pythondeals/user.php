@@ -8,7 +8,7 @@ if(isset($_POST['name'])){
 	$folder = "./images/" . $filename;
 
     // Create a database connection
-    $con = mysqli_connect("localhost", "root", "","items");
+    $con = mysqli_connect("localhost", "root1", "root1","items");
     
     // Check for connection success
     if(!$con){
@@ -38,7 +38,7 @@ if(isset($_POST['name'])){
           VALUES('".$filename."','".$name."','".$price."','".$unit."')";
           mysqli_query($con,$insert_query);
           }
-
+          
           if (move_uploaded_file($tempname, $folder)) {
             echo "<h3> Image uploaded successfully!</h3>";
         } else {
@@ -47,62 +47,8 @@ if(isset($_POST['name'])){
 }
 ?>
 
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pythondeals</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-   
-    <div class="container">
-        <div class="first">
-            <h1>User Side</h1>
-        </div>
-       
-        
-            <div class="card">
-                <?php
-                 $con = mysqli_connect("localhost", "root", "","items");
-                    $query = "SELECT * FROM items";
-                    $query_run = mysqli_query($con,$query);
-                    $data = mysqli_fetch_assoc($query_run);
-                    if(mysqli_num_rows($query_run)>0)
-                    {
-                        foreach($query_run as $row)
-                        {
-                            ?>
-                            
-                                <div class="itemcard">
-                                    <div class="column">
-                                        <img src="./images/<?php echo $row['filename']; ?>">
-                                    </div>
-                                    <div class="column">    
-                                        <?=$row["name"];?></div>
-                                    <div class="column">        
-                                        <?=$row["price"];?></div>
-                                    <div class="column">    
-                                        <?=$row["unit"];?></div>
-                                </div>    
-            
-                            <?php
-                                }
-                                }    
-                                else
-                                {
-                                    echo "No record found";
-                                }    
 
-                            ?>
-            </div>         
-       
-    </div>
-   
-    
-</body>
-</html> -->
+                
 
 
 <html>
@@ -111,7 +57,6 @@ if(isset($_POST['name'])){
   <title>User Page</title>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
-  <!-- <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet" /> -->
   <link rel="stylesheet" href="style.css">
  </head>
  <body>

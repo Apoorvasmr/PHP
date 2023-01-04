@@ -15,7 +15,7 @@
             
             <button class="menu_icon js-menu-icon">+ Add Product</button>
             <div class="menu">
-                <form action="third.php" method="post" enctype="multipart/form-data">
+                <form action="user.php" method="post" enctype="multipart/form-data">
                 <table>    
                     <tr>
                         <td>Insert Image</td>
@@ -63,7 +63,7 @@
         
             <div class="card">
                 <?php
-                    $con = mysqli_connect('localhost','root','','items');
+                    $con = mysqli_connect('localhost','root1','root1','items');
                     $query = "SELECT * FROM items";
                     $query_run = mysqli_query($con,$query);
                     $data = mysqli_fetch_assoc($query_run);
